@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Navigation Menu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 15px 0;
+      transition: background-color 0.3s;
+      z-index: 1000;
+    }
+
+    #navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    #navbar a:hover {
+      color: #4CAF50;
+    }
+
+    .content {
+      margin-top: 70px; /* Adjust according to the height of your navbar */
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="navbar">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+</div>
+
+<div class="content">
+    <h1>Welcome to Our Website</h1>
+    <p>Discover the best in class services and information at our website. We are dedicated to providing you with valuable content and exceptional services to meet your needs. Explore the different sections of our site to find out more about what we offer.</p>
+  
+    <h2>About Us</h2>
+    <p>Learn more about our company's history, mission, and values. Discover the people behind the scenes and the passion that drives us to deliver excellence in everything we do.</p>
+  
+    <h2>Our Services</h2>
+    <p>Explore our comprehensive range of services designed to cater to your specific requirements. Whether it's professional consultations, innovative solutions, or expert advice, we have you covered.</p>
+  
+    <h2>Contact Us</h2>
+    <p>Have questions or need assistance? Reach out to our dedicated support team. We are here to help you and ensure your experience with our website is seamless and enjoyable.</p>
+  </div>
+  
+
+<script>
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    var navbar = document.getElementById("navbar");
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      navbar.style.backgroundColor = "#555";
+    } else {
+      navbar.style.backgroundColor = "#333";
+    }
+  }
+</script>
+
+</body>
+</html>
